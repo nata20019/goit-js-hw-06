@@ -12,8 +12,10 @@ function onFormSubmit(event) {
   const formElements = event.currentTarget.elements;
   const email = formElements.email.value;
   const password = formElements.password.value;
-  const formData = { email, password };
-  console.log(formData);
+  if ((!email === "") & (!password === "")) {
+    const formData = { email, password };
+    console.log(formData);
+  }
 
   document.querySelector(".login-form").reset();
 }
